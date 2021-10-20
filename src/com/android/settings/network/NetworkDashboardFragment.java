@@ -97,6 +97,10 @@ public class NetworkDashboardFragment extends DashboardFragment implements
         }
         controllers.add(privateDnsPreferenceController);
 
+        ConnectivityCheckPreferenceController connectivityCheck =
+                new ConnectivityCheckPreferenceController(context);
+        controllers.add(connectivityCheck);
+
         // Start SettingsDumpService after the MobileNetworkRepository is created.
         Intent intent = new Intent(context, SettingsDumpService.class);
         intent.putExtra(SettingsDumpService.EXTRA_KEY_SHOW_NETWORK_DUMP, true);
