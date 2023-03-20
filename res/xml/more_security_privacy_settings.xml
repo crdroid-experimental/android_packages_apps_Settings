@@ -78,6 +78,13 @@
             <intent android:action="android.intent.action.REVIEW_ACCESSIBILITY_SERVICES"/>
         </Preference>
 
+        <!-- AdBlock -->
+        <SwitchPreference
+            android:key="adblock_enabled"
+            android:title="@string/enable_adblock"
+            android:summary="@string/enable_adblock_summary"
+            settings:controller="com.android.settings.privacy.AdBlockPreferenceController"/>
+
         <!-- On lock screen notifications -->
         <com.android.settings.RestrictedListPreference
             android:key="privacy_lock_screen_notifications"
